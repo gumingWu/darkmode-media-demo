@@ -11,17 +11,18 @@
   --color-text: var(--dmd-text-white);
 }
 
-.darkThemeMixin {
-  --color-background: var(---dmd-dark);
-  --color-text: var(--dmd-text-dark);
-}
+// .darkThemeMixin {
+//   --color-background: var(---dmd-dark);
+//   --color-text: var(--dmd-text-dark);
+// }
 
 :root.dark {
-  .darkThemeMixin();
+  --color-background: var(---dmd-dark);
+  --color-text: var(--dmd-text-dark);
   color-scheme: dark;
 }
 
-// /* 重点 */
+/* 重点 */
 // @media (prefers-color-scheme: dark) {
 //   :root {
 //     .darkThemeMixin();
