@@ -1,7 +1,6 @@
 <script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import HelloWorld from "./components/HelloWorld.vue";
+import MediaItem from "./components/MediaItem.vue";
 import { computed } from "vue";
 import { useDark, useToggle } from "@vueuse/core";
 
@@ -14,9 +13,12 @@ const btnMsg = computed(() => {
 </script>
 
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
-  <button @click="toggleDark()">{{ btnMsg }}</button>
+  <div class="main-wrap">
+    <img alt="Vue logo" src="./assets/logo.png" />
+    <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+    <button @click="toggleDark()">{{ btnMsg }}</button>
+  </div>
+  <MediaItem></MediaItem>
 </template>
 
 <style lang="less">
