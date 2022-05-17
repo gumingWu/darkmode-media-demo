@@ -1,12 +1,9 @@
 :root {
   --dmd-white: #ffffff;
-
   ---dmd-dark: #181818;
 
   --dmd-text-white: #2c3e50;
-
   --dmd-text-dark: rgba(235, 235, 235, 0.64);
-
 }
 
 :root {
@@ -14,17 +11,20 @@
   --color-text: var(--dmd-text-white);
 }
 
-:root.dark {
+.darkThemeMixin {
   --color-background: var(---dmd-dark);
   --color-text: var(--dmd-text-dark);
+}
+
+:root.dark {
+  .darkThemeMixin();
   color-scheme: dark;
 }
 
 /* 重点 */
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-background: var(---dmd-dark);
-    --color-text: var(--dmd-text-dark);
+    .darkThemeMixin();
   }
 }
 
